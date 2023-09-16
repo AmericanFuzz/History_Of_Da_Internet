@@ -3,4 +3,4 @@ This website is dedicated for the NHD project I have to do in high school sophom
 
 If you are trying to gain access to the actual website, please select the browser bar, and add "website.html" to the existing name.
 
-If you have no idea what I just said, just copy and paste into your browser this: https://americanfuzz.github.io/History_Of_Da_Internet/website.html
+If you have no idea what I just said, just copy and paste into your browser this: https://americanfuzz.github.io/History_Of_Da_Internet/V2_site.html
