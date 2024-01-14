@@ -1,0 +1,73 @@
+/*Things I want to control:
+
+scroll bar: scrollbar-color
+scrolling snap: scroll-snap-stop
+*/
+
+/*This is how you comment:*/
+/**/
+
+/*CSS(Cascading style sheets) just applies fine - tuning to anything that is mentioned under the same class in HTML, as long as the HTML links to the CSS file in <head></head>*/ 
+
+
+h1{
+    color: blue;
+}
+
+div.scroller{
+    scrollbar-color: orange;
+}
+
+:root{
+    --middleDistance: 350px;
+    --positionStatus: absolute;
+}
+
+/*the position is from the top - left of the image, in refrence to the top - left of the screen.*/
+/*the screen is 0 maximum height and minimum height is 725(362 is roughly the middle)*/ 
+
+.fiftyEight{ position: var(--positionStatus); left: 200px; top: var(--middleDistance);} /*for all of the bubbles*/
+.fiftyNine{ position: var(--positionStatus); left: 400px; top: var(--middleDistance);}
+.sixty{ position: var(--positionStatus); left: 600px; top: var(--middleDistance);}
+.sixtyOne{ position: var(--positionStatus); left: 800px; top: var(--middleDistance);}
+.sixtyTwo{ position: var(--positionStatus); left: 1000px; top: var(--middleDistance);}
+.sixtyThree{ position: var(--positionStatus); left: 1200px; top: var(--middleDistance);}
+.sixtyFour{ position: var(--positionStatus); left: 1400px; top: var(--middleDistance);}
+.sixtyFive{ position: var(--positionStatus); left: 1600px; top: var(--middleDistance);}
+.sixtySix{ position: var(--positionStatus); left: 1800px; top: var(--middleDistance);}
+.sixtySeven{ position: var(--positionStatus); left: 2000px; top: var(--middleDistance);}
+.sixtyEight{ position: var(--positionStatus); left: 2200px; top: var(--middleDistance);}
+.sixtyNine{ position: var(--positionStatus); left: 2400px; top: var(--middleDistance);}
+.seventy{ position: var(--positionStatus); left: 2600px; top: var(--middleDistance);}
+.seventyOne{ position: var(--positionStatus); left: 2800px; top: var(--middleDistance);}
+.seventyTwo{ position: var(--positionStatus); left: 3000px; top: var(--middleDistance);}
+.seventyThree{ position: var(--positionStatus); left: 3200px; top: var(--middleDistance);}
+.seventyFour{ position: var(--positionStatus); left: 3400px; top: var(--middleDistance);}
+.seventyFive{ position: var(--positionStatus); left: 3600px; top: var(--middleDistance);}
+.seventySix{ position: var(--positionStatus); left: 3800px; top: var(--middleDistance);}
+.seventySeven{ position: var(--positionStatus); left: 4000px; top: var(--middleDistance);}
+.seventyEight{ position: var(--positionStatus); left: 4200px; top: var(--middleDistance);}
+.seventyNine{ position: var(--positionStatus); left: 4400px; top: var(--middleDistance);}
+.eighty{ position: var(--positionStatus); left: 4600px; top: var(--middleDistance);}
+.eightyOne{ position: var(--positionStatus); left: 4800px; top: var(--middleDistance);}
+.eightyTwo{ position: var(--positionStatus); left: 5000px; top: var(--middleDistance);}
+.eightyThree{ position: var(--positionStatus); left: 5200px; top: var(--middleDistance);}
+.eightyFour{ position: var(--positionStatus); left: 5400px; top: var(--middleDistance);}
+.eightyFive{ position: var(--positionStatus); left: 5600px; top: var(--middleDistance);}
+.eightySix{ position: var(--positionStatus); left: 5800px; top: var(--middleDistance);}
+.eightySeven{ position: var(--positionStatus); left: 6000px; top: var(--middleDistance);}
+.eightyEight{ position: var(--positionStatus); left: 6200px; top: var(--middleDistance);}
+.eightyNine{ position: var(--positionStatus); left: 6400px; top: var(--middleDistance);}
+.ninety{ position: var(--positionStatus); left: 6600px; top: var(--middleDistance);}
+.ninetyOne{ position: var(--positionStatus); left: 6800px; top: var(--middleDistance);}
+.ninetyTwo{ position: var(--positionStatus); left: 7000px; top: var(--middleDistance);}
+.ninetyThree{ position: var(--positionStatus); left: 7200px; top: var(--middleDistance);}
+.ninetyFour{ position: var(--positionStatus); left: 7400px; top: var(--middleDistance);}
+.ninetyFive{ position: var(--positionStatus); left: 7600px; top: var(--middleDistance);}
+.ninetySix{ position: var(--positionStatus); left: 7800px; top: var(--middleDistance);}
+.ninetySeven{ position: var(--positionStatus); left: 8000px; top: var(--middleDistance);}
+.ninetyEight{ position: var(--positionStatus); left: 8200px; top: var(--middleDistance);}
+.ninetyNine{ position: var(--positionStatus); left: 8400px; top: var(--middleDistance);}
+.thousand{ position: var(--positionStatus); left: 8600px; top: var(--middleDistance);}
+.past{ position: var(--positionStatus); left: 0px; top: var(--middleDistance);}
+.future{ position: var(--positionStatus); left: 8800px; top: var(--middleDistance);}
