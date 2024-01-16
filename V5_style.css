@@ -1,0 +1,189 @@
+/*Things I want to control:
+
+scroll bar: scrollbar-color
+scrolling snap: scroll-snap-stop
+*/
+
+/*This is how you comment:*/
+/**/
+
+/*CSS(Cascading style sheets) just applies fine - tuning to anything that is mentioned under the same class in HTML, as long as the HTML links to the CSS file in <head></head>*/ 
+
+
+/*my variables to easily change things(on global scope)*/
+:root{
+    --middleDistance: 50%; /*position can either be in px like 10px, or in % of the screen, like 50% for the middle*/
+    --positionStatus: absolute;
+    --imageURL: url("https://americanfuzz.github.io/History_Of_Da_Internet/bubbleNonTransparent.png");
+    --alternatePlaceholder: "bubble";
+    --imageWidth: 25px;
+    --imageHeight: 25px;
+    --bubbleIncrement: 200px;
+    --dateAdjust: 5px;
+    --dateTopDelta: -40px;
+    --dateBottomDelta: 20px;
+}
+/*my variables to easily change things*/
+
+/*Customize Scroll Bar --------------------------*/
+body::-webkit-scrollbar{ /*This does not do much, but ios NECCESSARY for the customization to work*/
+    width: 10px; /*changes regardless, but I need this here to be able to customize other things*/
+}
+body::-webkit-scrollbar-track{ /*This does not do much, but ios NECCESSARY for the customization to work*/
+    background: white; /*The background of the path where the scroll bar can go*/
+}
+body::-webkit-scrollbar-thumb{ /*This does not do much, but ios NECCESSARY for the customization to work*/
+    background-color: white; /*The scrollbar color*/
+    border-radius: 10px; /*The scrollbar radius(rounded edges)*/
+    border: 3px solid black; /*The border of the scroll bar, and how thick it is and it's color*/
+}
+/*Customize Scroll Bar --------------------------*/
+
+/*Customize cursor*/
+html{
+    cursor: url('https://americanfuzz.github.io/History_Of_Da_Internet/cursor.png'), default;
+}
+/*Customize cursor*/
+
+/*rotate: 90deg; is for rotation*/
+
+/*the position is from the top - left of the image, in refrence to the top - left of the screen.*/
+/*the screen is 0 maximum height and minimum height is 725(362 is roughly the middle)*/ 
+
+/*ALWAYS PUT "px" AFTER THE NUMBER FOR SIZE!!! (example: 5px)*/
+/*The things that look like:
+
+.something{
+    property: value;
+}
+
+are called: "rulesets".
+*/
+
+/*Dates*/
+.TopDate{ /*colective dates*/
+    position: absolute;
+    top: calc(50% + var(--dateTopDelta));
+}
+
+.BottomDate{ /*colective dates*/
+    position: absolute;
+    top: calc(50% + var(--dateBottomDelta));
+}
+
+.fiftyEightYear{ left: calc((var(--bubbleIncrement) * 1) - var(--dateAdjust));} /*for all of the dates individually*/
+.fiftyNineYear{ left: calc((var(--bubbleIncrement) * 2) - var(--dateAdjust));}
+.sixtyYear{ left: calc((var(--bubbleIncrement) * 3) - var(--dateAdjust));}
+.sixtyOneYear{ left: calc((var(--bubbleIncrement) * 4) - var(--dateAdjust));}
+.sixtyTwoYear{ left: calc((var(--bubbleIncrement) * 5) - var(--dateAdjust));}
+.sixtyThreeYear{ left: calc((var(--bubbleIncrement) * 6) - var(--dateAdjust));}
+.sixtyFourYear{ left: calc((var(--bubbleIncrement) * 7) - var(--dateAdjust));}
+.sixtyFiveYear{ left: calc((var(--bubbleIncrement) * 8) - var(--dateAdjust));}
+.sixtySixYear{ left: calc((var(--bubbleIncrement) * 9) - var(--dateAdjust));}
+.sixtySevenYear{ left: calc((var(--bubbleIncrement) * 10) - var(--dateAdjust));}
+.sixtyEightYear{ left: calc((var(--bubbleIncrement) * 11) - var(--dateAdjust));}
+.sixtyNineYear{ left: calc((var(--bubbleIncrement) * 12) - var(--dateAdjust));}
+.seventyYear{ left: calc((var(--bubbleIncrement) * 13) - var(--dateAdjust));}
+.seventyOneYear{ left: calc((var(--bubbleIncrement) * 14) - var(--dateAdjust));}
+.seventyTwoYear{ left: calc((var(--bubbleIncrement) * 15) - var(--dateAdjust));}
+.seventyThreeYear{ left: calc((var(--bubbleIncrement) * 16) - var(--dateAdjust));}
+.seventyFourYear{ left: calc((var(--bubbleIncrement) * 17) - var(--dateAdjust));}
+.seventyFiveYear{ left: calc((var(--bubbleIncrement) * 18) - var(--dateAdjust));}
+.seventySixYear{ left: calc((var(--bubbleIncrement) * 19) - var(--dateAdjust));}
+.seventySevenYear{ left: calc((var(--bubbleIncrement) * 20) - var(--dateAdjust));}
+.seventyEightYear{ left: calc((var(--bubbleIncrement) * 21) - var(--dateAdjust));}
+.seventyNineYear{ left: calc((var(--bubbleIncrement) * 22) - var(--dateAdjust));}
+.eightyYear{ left: calc((var(--bubbleIncrement) * 23) - var(--dateAdjust));}
+.eightyOneYear{ left: calc((var(--bubbleIncrement) * 24) - var(--dateAdjust));}
+.eightyTwoYear{ left: calc((var(--bubbleIncrement) * 25) - var(--dateAdjust));}
+.eightyThreeYear{ left: calc((var(--bubbleIncrement) * 26) - var(--dateAdjust));}
+.eightyFourYear{ left: calc((var(--bubbleIncrement) * 27) - var(--dateAdjust));}
+.eightyFiveYear{ left: calc((var(--bubbleIncrement) * 28) - var(--dateAdjust));}
+.eightySixYear{ left: calc((var(--bubbleIncrement) * 29) - var(--dateAdjust));}
+.eightySevenYear{ left: calc((var(--bubbleIncrement) * 30) - var(--dateAdjust));}
+.eightyEightYear{ left: calc((var(--bubbleIncrement) * 31) - var(--dateAdjust));}
+.eightyNineYear{ left: calc((var(--bubbleIncrement) * 32) - var(--dateAdjust));}
+.ninetyYear{ left: calc((var(--bubbleIncrement) * 33) - var(--dateAdjust));}
+.ninetyOneYear{ left: calc((var(--bubbleIncrement) * 34) - var(--dateAdjust));}
+.ninetyTwoYear{ left: calc((var(--bubbleIncrement) * 35) - var(--dateAdjust));}
+.ninetyThreeYear{ left: calc((var(--bubbleIncrement) * 36) - var(--dateAdjust));}
+.ninetyFourYear{ left: calc((var(--bubbleIncrement) * 37) - var(--dateAdjust));}
+.ninetyFiveYear{ left: calc((var(--bubbleIncrement) * 38) - var(--dateAdjust));}
+.ninetySixYear{ left: calc((var(--bubbleIncrement) * 39) - var(--dateAdjust));}
+.ninetySevenYear{ left: calc((var(--bubbleIncrement) * 40) - var(--dateAdjust));}
+.ninetyEightYear{ left: calc((var(--bubbleIncrement) * 41) - var(--dateAdjust));}
+.ninetyNineYear{ left: calc((var(--bubbleIncrement) * 42) - var(--dateAdjust));}
+.thousandYear{ left: calc((var(--bubbleIncrement) * 43) - var(--dateAdjust));}
+/*Dates*/
+
+
+
+/*TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES*/
+
+.timeLine{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+/*calc() returns the math from inside the parenthesis*/
+
+.bubble{ /*The class that bubble has second, that helps define the basic bubble architecture, to later let me change things for the individual*/
+    position: var(--positionStatus); top: var(--middleDistance); content: var(--imageURL); width: var(--imageWidth); height: var(--imageHeight);
+}
+.fiftyEight{ left: calc(var(--bubbleIncrement) * 1);} /*for all of the bubbles individually*/
+.fiftyNine{ left: calc(var(--bubbleIncrement) * 2);}
+.sixty{ left: calc(var(--bubbleIncrement) * 3);}
+.sixtyOne{ left: calc(var(--bubbleIncrement) * 4);}
+.sixtyTwo{ left: calc(var(--bubbleIncrement) * 5);}
+.sixtyThree{ left: calc(var(--bubbleIncrement) * 6);}
+.sixtyFour{ left: calc(var(--bubbleIncrement) * 7);}
+.sixtyFive{ left: calc(var(--bubbleIncrement) * 8);}
+.sixtySix{ left: calc(var(--bubbleIncrement) * 9);}
+.sixtySeven{ left: calc(var(--bubbleIncrement) * 10);}
+.sixtyEight{ left: calc(var(--bubbleIncrement) * 11);}
+.sixtyNine{ left: calc(var(--bubbleIncrement) * 12);}
+.seventy{ left: calc(var(--bubbleIncrement) * 13);}
+.seventyOne{ left: calc(var(--bubbleIncrement) * 14);}
+.seventyTwo{ left: calc(var(--bubbleIncrement) * 15);}
+.seventyThree{ left: calc(var(--bubbleIncrement) * 16);}
+.seventyFour{ left: calc(var(--bubbleIncrement) * 17);}
+.seventyFive{ left: calc(var(--bubbleIncrement) * 18);}
+.seventySix{ left: calc(var(--bubbleIncrement) * 19);}
+.seventySeven{ left: calc(var(--bubbleIncrement) * 20);}
+.seventyEight{ left: calc(var(--bubbleIncrement) * 21);}
+.seventyNine{ left: calc(var(--bubbleIncrement) * 22);}
+.eighty{ left: calc(var(--bubbleIncrement) * 23);}
+.eightyOne{ left: calc(var(--bubbleIncrement) * 24);}
+.eightyTwo{ left: calc(var(--bubbleIncrement) * 25);}
+.eightyThree{ left: calc(var(--bubbleIncrement) * 26);}
+.eightyFour{ left: calc(var(--bubbleIncrement) * 27);}
+.eightyFive{ left: calc(var(--bubbleIncrement) * 28);}
+.eightySix{ left: calc(var(--bubbleIncrement) * 29);}
+.eightySeven{ left: calc(var(--bubbleIncrement) * 30);}
+.eightyEight{ left: calc(var(--bubbleIncrement) * 31);}
+.eightyNine{ left: calc(var(--bubbleIncrement) * 32);}
+.ninety{ left: calc(var(--bubbleIncrement) * 33);}
+.ninetyOne{ left: calc(var(--bubbleIncrement) * 34);}
+.ninetyTwo{ left: calc(var(--bubbleIncrement) * 35);}
+.ninetyThree{ left: calc(var(--bubbleIncrement) * 36);}
+.ninetyFour{ left: calc(var(--bubbleIncrement) * 37);}
+.ninetyFive{ left: calc(var(--bubbleIncrement) * 38);}
+.ninetySix{ left: calc(var(--bubbleIncrement) * 39);}
+.ninetySeven{ left: calc(var(--bubbleIncrement) * 40);}
+.ninetyEight{ left: calc(var(--bubbleIncrement) * 41);}
+.ninetyNine{ left: calc(var(--bubbleIncrement) * 42);}
+.thousand{ left: calc(var(--bubbleIncrement) * 43);}
+/*42 bubbles in total, 1958 to 2000*/
+
+/*future and past arrows*/
+.past{ position: var(--positionStatus); left: 0px; top: var(--middleDistance);}
+.future{ position: var(--positionStatus); left: 8800px; top: var(--middleDistance);}
+/*future and past arrows*/
+
+/*TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES*/
+
+
+
+
+

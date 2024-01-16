@@ -1,0 +1,189 @@
+<!DOCTYPE html> <!--set the library of html to the document to be able to do anything in the first place-->
+
+<!--This is how you comment to remember things(you cannot put a comment in a comment):-->
+<!---->
+
+<!--Comments also can go across several lines, like this:
+        And this:
+    
+                        Pretty cool.-->
+
+<!--"Tags" are the things that go: <></>, while "Attributes" are one - liners like: img<> -->
+<!--Tags and Attributes can be put in each other, as long as they close in order of getting opened.-->
+
+<!--The basic setup like void loop() and void setup() in c++ are in HTML with the pattern:
+
+<html>                                              (set up the website to exist) 
+    <head>                                          
+                                                    (name the "tab" in the browser of your website)
+    </head>
+
+    <body>
+                                                    (actual website contents)
+    </body>
+</html>                                             (close website file to be presented)
+
+That's pretty much it I think.-->
+
+<!--The little icon on the tab is called a favicon, and has to be a 16*16 or 32*32 square .ico or .gif or .png-->
+<!--I got my favion(s) by designing and downloading them on the website: "favicon.cc"-->
+
+<!--SAVE EVERYTHING BEFORE OPENING IN BROWSER, OR THERE WILL BE NO NEW RESULTS!!!
+
+*** INCLUDING JAVASCRIPT AND CSS FILES!!!-->
+
+<!--You don't actually need tags to write text, just type anything anyhow, and you will see text(it will be default crappy text though with no control)-->
+
+
+<!--"class" sets the categories of tags that can be modified from css, AND EVERYTHING IN THEM!
+
+example: 
+
+HTML
+<div class = "redText">
+    <h1>Hello</h1>
+    <h1>Goodbye</h1>
+</div>
+
+CSS
+.redText{
+    fontColor: .red;
+}
+
+This will make all of the text h1's and anything else red! BAD!
+
+do this:
+
+HTML
+<div>
+    <h1 class = "green">Hello</h1>
+    <h1 class = "red">Goodbye</h1>
+</div>
+
+CSS
+.green{
+    fontColor: .green;
+}
+.red{
+    fontColor: .red;
+}
+-->
+
+<!--<hr> is a simple spacer-->
+<!--<br> is a simple line breaker(new line in <p></p>)-->
+
+
+
+<html lang="en"> <!--open up the website with the "html" -->
+
+    <head> <!--Tab bar stuff-->
+        <title>HistoryOfDaInternet</title> <!--name the tab-->
+        <link rel="icon" href="https://americanfuzz.github.io/History_Of_Da_Internet/faviconV3.ico"> <!--image the tab-->
+        <link rel = "stylesheet" href = V5_style.css>
+    </head>
+    
+    <body> <!--actual website contents-->
+        
+        <div class = "yearDates">
+            <p class = "fiftyEightYear BottomDate date">1958</p>
+            <p class = "fiftyNineYear TopDate date">1959</p>
+            <p class = "sixtyYear BottomDate date">1960</p>
+            <p class = "sixtyOneYear TopDate date">1961</p>
+            <p class = "sixtyTwoYear BottomDate date">1962</p>
+            <p class = "sixtyThreeYear TopDate date">1963</p>
+            <p class = "sixtyFourYear BottomDate date">1964</p>
+            <p class = "sixtyFiveYear TopDate date">1965</p>
+            <p class = "sixtySixYear BottomDate date">1966</p>
+            <p class = "sixtySevenYear TopDate date">1967</p>
+            <p class = "sixtyEightYear BottomDate date">1968</p>
+            <p class = "sixtyNineYear TopDate date">1969</p>
+            <p class = "seventyYear BottomDate date">1970</p>
+            <p class = "seventyOneYear TopDate date">1971</p>
+            <p class = "seventyTwoYear BottomDate date">1972</p>
+            <p class = "seventyThreeYear TopDate date">1973</p>
+            <p class = "seventyFourYear BottomDate date">1974</p>
+            <p class = "seventyFiveYear TopDate date">1975</p>
+            <p class = "seventySixYear BottomDate date">1976</p>
+            <p class = "seventySevenYear TopDate date">1977</p>
+            <p class = "seventyEightYear BottomDate date">1978</p>
+            <p class = "seventyNineYear TopDate date">1979</p>
+            <p class = "eightyYear BottomDate date">1980</p>
+            <p class = "eightyOneYear TopDate date">1981</p>
+            <p class = "eightyTwoYear BottomDate date">1982</p>
+            <p class = "eightyThreeYear TopDate date">1983</p>
+            <p class = "eightyFourYear BottomDate date">1984</p>
+            <p class = "eightyFiveYear TopDate date">1985</p>
+            <p class = "eightySixYear BottomDate date">1986</p>
+            <p class = "eightySevenYear TopDate date">1987</p>
+            <p class = "eightyEightYear BottomDate date">1988</p>
+            <p class = "eightyNineYear TopDate date">1989</p>
+            <p class = "ninetyYear BottomDate date">1990</p>
+            <p class = "ninetyOneYear TopDate date">1991</p>
+            <p class = "ninetyTwoYear BottomDate date">1992</p>
+            <p class = "ninetyThreeYear TopDate date">1993</p>
+            <p class = "ninetyFourYear BottomDate date">1994</p>
+            <p class = "ninetyFiveYear TopDate date">1995</p>
+            <p class = "ninetySixYear BottomDate date">1996</p>
+            <p class = "ninetySevenYear TopDate date">1997</p>
+            <p class = "ninetyEightYear BottomDate date">1998</p>
+            <p class = "ninetyNineYear TopDate date">1999</p>
+            <p class = "thousandYear BottomDate date">2000</p>
+        </div>
+
+        <!--HTML uses just numbers for sizes, CSS needs number and "px" after it. example:: HTML: 50 CSS: 50px-->
+        <img class = "timeLine" src = "https://americanfuzz.github.io/History_Of_Da_Internet/lineV2.png" alt = "timeLine" width = 8785 height = 18>
+
+        <!--A "div" here is not neccessary, but I want to be able to crunch the text down for easier reading-->
+        <div class = "bubbles"> <!--I am putting " bubble" after each image to give it a common class that can set up all of their similarities in one line, rather than 42. "alt" section is for their display name if the file is not found.(just in case.)-->
+            <img class = "fiftyEight bubble" alt = "bubble">
+            <img class = "fiftyNine bubble" alt = "bubble">
+            <img class = "sixty bubble" alt = "bubble">
+            <img class = "sixtyOne bubble" alt = "bubble">
+            <img class = "sixtyTwo bubble" alt = "bubble">
+            <img class = "sixtyThree bubble" alt = "bubble">
+            <img class = "sixtyFour bubble" alt = "bubble">                
+            <img class = "sixtyFive bubble" alt = "bubble">
+            <img class = "sixtySix bubble" alt = "bubble">
+            <img class = "sixtySeven bubble" alt = "bubble">
+            <img class = "sixtyEight bubble" alt = "bubble">
+            <img class = "sixtyNine bubble" alt = "bubble">
+            <img class = "seventy bubble" alt = "bubble">
+            <img class = "seventyOne bubble" alt = "bubble">
+            <img class = "seventyTwo bubble" alt = "bubble">
+            <img class = "seventyThree bubble" alt = "bubble">
+            <img class = "seventyFour bubble" alt = "bubble">
+            <img class = "seventyFive bubble" alt = "bubble">
+            <img class = "seventySix bubble" alt = "bubble">
+            <img class = "seventySeven bubble" alt = "bubble">
+            <img class = "seventyEight bubble" alt = "bubble">
+            <img class = "seventyNine bubble" alt = "bubble">
+            <img class = "eighty bubble" alt = "bubble">
+            <img class = "eightyOne bubble" alt = "bubble">
+            <img class = "eightyTwo bubble" alt = "bubble">
+            <img class = "eightyThree bubble" alt = "bubble">
+            <img class = "eightyFour bubble" alt = "bubble">
+            <img class = "eightyFive bubble" alt = "bubble">
+            <img class = "eightySix bubble" alt = "bubble">
+            <img class = "eightySeven bubble" alt = "bubble">
+            <img class = "eightyEight bubble" alt = "bubble">
+            <img class = "eightyNine bubble" alt = "bubble">
+            <img class = "ninety bubble" alt = "bubble">                
+            <img class = "ninetyOne bubble" alt = "bubble">
+            <img class = "ninetyTwo bubble" alt = "bubble">
+            <img class = "ninetyThree bubble" alt = "bubble">
+            <img class = "ninetyFour bubble" alt = "bubble">
+            <img class = "ninetyFive bubble" alt = "bubble">
+            <img class = "ninetySix bubble" alt = "bubble">
+            <img class = "ninetySeven bubble" alt = "bubble">
+            <img class = "ninetyEight bubble" alt = "bubble">
+            <img class = "ninetyNine bubble" alt = "bubble">
+            <img class = "thousand bubble" alt = "bubble">
+        </div>
+
+        <div class = "arrows">
+            <img class = "past" src = "https://americanfuzz.github.io/History_Of_Da_Internet/pastArrow.png" alt = "pastArrow" width = 25 height = 25>
+            <img class = "future" src = "https://americanfuzz.github.io/History_Of_Da_Internet/futureArrow.png" alt = "futureArrow" width = 25 height = 25>
+        </div>
+
+    </body>  
+</html>
