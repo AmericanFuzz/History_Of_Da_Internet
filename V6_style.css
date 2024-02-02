@@ -268,7 +268,7 @@ are called: "rulesets".
 
 
 .info{
-    position: var(--positionStatus);
+    position: var(--positionStatus); width: 300px;
 }
 
 .topInfo{
