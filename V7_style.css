@@ -1,0 +1,387 @@
+/*Things I want to control:
+
+scroll bar: scrollbar-color
+scrolling snap: scroll-snap-stop
+*/
+
+/*This is how you comment:*/
+/**/
+
+/*CSS(Cascading style sheets) just applies fine - tuning to anything that is mentioned under the same class in HTML, as long as the HTML links to the CSS file in <head></head>*/ 
+
+
+/*my variables to easily change things(on global scope)*/
+:root{
+    --middleDistance: 50%; /*position can either be in px like 10px, or in % of the screen, like 50% for the middle*/
+    --positionStatus: absolute;
+    --imageURL: url("https://americanfuzz.github.io/History_Of_Da_Internet/bubbleNonTransparent.png");
+    --alternatePlaceholder: "bubble";
+
+    --imageWidth: 25px;
+    --imageHeight: 25px;
+    --bubbleIncrement: 200px;
+
+    --dateAdjust: 5px;
+    --dateTopDelta: -40px;
+    --dateBottomDelta: 20px;
+
+    --firstLayerCompensate: 100px;
+
+    --funnelWidth: 350px;
+    --funnelHeight: 50px;
+    --funnelLeftCompensation: 9px;
+    --funnelLeftBottomCompensation: 16px;
+    --bottomFunnelImageURL: url("https://americanfuzz.github.io/History_Of_Da_Internet/infoFunnel2.png");
+    --topFunnelImageURL: url("https://americanfuzz.github.io/History_Of_Da_Internet/infoFunnel.png");
+    --topFunnelAdjust: calc(var(--funnelWidth) / 2) + var(--funnelLeftCompensation);
+    --bottomFunnelAdjust: calc(var(--funnelWidth) / 2) + var(--funnelLeftBottomCompensation);
+
+    --topInfoCornerPadding: 35px;
+    --bottomInfoCornerPadding: 30px;
+    --infoTopAdjust: calc(var(--funnelWidth) / 2) + var(--funnelLeftCompensation) + var(--topInfoCornerPadding);
+    --infoBottomAdjust: calc(var(--funnelWidth) / 2) + var(--funnelLeftBottomCompensation) + var(--bottomInfoCornerPadding);
+}
+/*my variables to easily change things*/
+
+/*Customize Scroll Bar --------------------------*/
+body::-webkit-scrollbar{ /*This does not do much, but ios NECCESSARY for the customization to work*/
+    width: 10px; /*changes regardless, but I need this here to be able to customize other things*/
+}
+body::-webkit-scrollbar-track{ /*This does not do much, but ios NECCESSARY for the customization to work*/
+    background: white; /*The background of the path where the scroll bar can go*/
+}
+body::-webkit-scrollbar-thumb{ /*This does not do much, but ios NECCESSARY for the customization to work*/
+    background-color: white; /*The scrollbar color*/
+    border-radius: 10px; /*The scrollbar radius(rounded edges)*/
+    border: 3px solid black; /*The border of the scroll bar, and how thick it is and it's color*/
+}
+/*Customize Scroll Bar --------------------------*/
+
+/*Customize cursor*/
+html{
+    cursor: url('https://americanfuzz.github.io/History_Of_Da_Internet/cursor.png'), default;
+}
+/*Customize cursor*/
+
+/*rotate: 90deg; is for rotation*/
+
+/*the position is from the top - left of the image, in refrence to the top - left of the screen.*/
+/*the screen is 0 maximum height and minimum height is 725(362 is roughly the middle)*/ 
+
+/*ALWAYS PUT "px" AFTER THE NUMBER FOR SIZE!!! (example: 5px)*/
+/*The things that look like:
+
+.something{
+    property: value;
+}
+
+are called: "rulesets".
+*/
+
+.mainTitle{
+    position: fixed;
+    top: 0%;
+    left: calc(50% - 250px);
+    font-size: 50px;
+}
+
+.bibliography{
+    position: fixed;
+    top: 3%;
+    left: 2%;
+    transform: rotate(340deg);
+    font-size: 25px;
+}
+
+.refrences{
+    position: fixed;
+    top: 3%;
+    right: 2%;
+    transform: rotate(20deg);
+    font-size: 25px;
+}
+
+.titleBorder{
+    position: fixed;
+    top: 16%;
+    right: calc(50% - 500px);
+}
+
+.creditBorder{
+    position: fixed;
+    bottom: 8%;
+    right: calc(50% - 1500px);
+}
+
+.myCredit{
+    position: fixed;
+    bottom: 3%;
+    right: calc(50% - 160px);
+    font-size: 15px;
+}
+
+.shawnCredit{
+    position: fixed;
+    bottom: 2%;
+    left: 10%;
+    font-size: 15px;
+}
+
+.traceCredit{
+    position: fixed;
+    bottom: 2%;
+    right: 10%;
+    font-size: 15px;
+}
+
+.familyCredit{
+    position: fixed;
+    bottom: 0%;
+    right: calc(50% - 290px);
+    font-size: 8px;
+}
+
+
+/*Dates*/
+.TopDate{ /*colective dates*/
+    position: absolute;
+    top: calc(50% + var(--dateTopDelta));
+}
+
+.BottomDate{ /*colective dates*/
+    position: absolute;
+    top: calc(50% + var(--dateBottomDelta));
+}
+
+.fiftyEightYear{ left: calc((var(--bubbleIncrement) * 1) - var(--dateAdjust));} /*for all of the dates individually*/
+.fiftyNineYear{ left: calc((var(--bubbleIncrement) * 2) - var(--dateAdjust));}
+.sixtyYear{ left: calc((var(--bubbleIncrement) * 3) - var(--dateAdjust));}
+.sixtyOneYear{ left: calc((var(--bubbleIncrement) * 4) - var(--dateAdjust));}
+.sixtyTwoYear{ left: calc((var(--bubbleIncrement) * 5) - var(--dateAdjust));}
+.sixtyThreeYear{ left: calc((var(--bubbleIncrement) * 6) - var(--dateAdjust));}
+.sixtyFourYear{ left: calc((var(--bubbleIncrement) * 7) - var(--dateAdjust));}
+.sixtyFiveYear{ left: calc((var(--bubbleIncrement) * 8) - var(--dateAdjust));}
+.sixtySixYear{ left: calc((var(--bubbleIncrement) * 9) - var(--dateAdjust));}
+.sixtySevenYear{ left: calc((var(--bubbleIncrement) * 10) - var(--dateAdjust));}
+.sixtyEightYear{ left: calc((var(--bubbleIncrement) * 11) - var(--dateAdjust));}
+.sixtyNineYear{ left: calc((var(--bubbleIncrement) * 12) - var(--dateAdjust));}
+.seventyYear{ left: calc((var(--bubbleIncrement) * 13) - var(--dateAdjust));}
+.seventyOneYear{ left: calc((var(--bubbleIncrement) * 14) - var(--dateAdjust));}
+.seventyTwoYear{ left: calc((var(--bubbleIncrement) * 15) - var(--dateAdjust));}
+.seventyThreeYear{ left: calc((var(--bubbleIncrement) * 16) - var(--dateAdjust));}
+.seventyFourYear{ left: calc((var(--bubbleIncrement) * 17) - var(--dateAdjust));}
+.seventyFiveYear{ left: calc((var(--bubbleIncrement) * 18) - var(--dateAdjust));}
+.seventySixYear{ left: calc((var(--bubbleIncrement) * 19) - var(--dateAdjust));}
+.seventySevenYear{ left: calc((var(--bubbleIncrement) * 20) - var(--dateAdjust));}
+.seventyEightYear{ left: calc((var(--bubbleIncrement) * 21) - var(--dateAdjust));}
+.seventyNineYear{ left: calc((var(--bubbleIncrement) * 22) - var(--dateAdjust));}
+.eightyYear{ left: calc((var(--bubbleIncrement) * 23) - var(--dateAdjust));}
+.eightyOneYear{ left: calc((var(--bubbleIncrement) * 24) - var(--dateAdjust));}
+.eightyTwoYear{ left: calc((var(--bubbleIncrement) * 25) - var(--dateAdjust));}
+.eightyThreeYear{ left: calc((var(--bubbleIncrement) * 26) - var(--dateAdjust));}
+.eightyFourYear{ left: calc((var(--bubbleIncrement) * 27) - var(--dateAdjust));}
+.eightyFiveYear{ left: calc((var(--bubbleIncrement) * 28) - var(--dateAdjust));}
+.eightySixYear{ left: calc((var(--bubbleIncrement) * 29) - var(--dateAdjust));}
+.eightySevenYear{ left: calc((var(--bubbleIncrement) * 30) - var(--dateAdjust));}
+.eightyEightYear{ left: calc((var(--bubbleIncrement) * 31) - var(--dateAdjust));}
+.eightyNineYear{ left: calc((var(--bubbleIncrement) * 32) - var(--dateAdjust));}
+.ninetyYear{ left: calc((var(--bubbleIncrement) * 33) - var(--dateAdjust));}
+.ninetyOneYear{ left: calc((var(--bubbleIncrement) * 34) - var(--dateAdjust));}
+.ninetyTwoYear{ left: calc((var(--bubbleIncrement) * 35) - var(--dateAdjust));}
+.ninetyThreeYear{ left: calc((var(--bubbleIncrement) * 36) - var(--dateAdjust));}
+.ninetyFourYear{ left: calc((var(--bubbleIncrement) * 37) - var(--dateAdjust));}
+.ninetyFiveYear{ left: calc((var(--bubbleIncrement) * 38) - var(--dateAdjust));}
+.ninetySixYear{ left: calc((var(--bubbleIncrement) * 39) - var(--dateAdjust));}
+.ninetySevenYear{ left: calc((var(--bubbleIncrement) * 40) - var(--dateAdjust));}
+.ninetyEightYear{ left: calc((var(--bubbleIncrement) * 41) - var(--dateAdjust));}
+.ninetyNineYear{ left: calc((var(--bubbleIncrement) * 42) - var(--dateAdjust));}
+.thousandYear{ left: calc((var(--bubbleIncrement) * 43) - var(--dateAdjust));}
+/*Dates*/
+
+
+
+/*TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES*/
+
+.timeLine{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+/*calc() returns the math from inside the parenthesis*/
+
+.bubble{ /*The class that bubble has second, that helps define the basic bubble architecture, to later let me change things for the individual*/
+    position: var(--positionStatus); top: var(--middleDistance); content: var(--imageURL); width: var(--imageWidth); height: var(--imageHeight);
+}
+.fiftyEight{ left: calc(var(--bubbleIncrement) * 1);} /*for all of the bubbles individually*/
+.fiftyNine{ left: calc(var(--bubbleIncrement) * 2);}
+.sixty{ left: calc(var(--bubbleIncrement) * 3);}
+.sixtyOne{ left: calc(var(--bubbleIncrement) * 4);}
+.sixtyTwo{ left: calc(var(--bubbleIncrement) * 5);}
+.sixtyThree{ left: calc(var(--bubbleIncrement) * 6);}
+.sixtyFour{ left: calc(var(--bubbleIncrement) * 7);}
+.sixtyFive{ left: calc(var(--bubbleIncrement) * 8);}
+.sixtySix{ left: calc(var(--bubbleIncrement) * 9);}
+.sixtySeven{ left: calc(var(--bubbleIncrement) * 10);}
+.sixtyEight{ left: calc(var(--bubbleIncrement) * 11);}
+.sixtyNine{ left: calc(var(--bubbleIncrement) * 12);}
+.seventy{ left: calc(var(--bubbleIncrement) * 13);}
+.seventyOne{ left: calc(var(--bubbleIncrement) * 14);}
+.seventyTwo{ left: calc(var(--bubbleIncrement) * 15);}
+.seventyThree{ left: calc(var(--bubbleIncrement) * 16);}
+.seventyFour{ left: calc(var(--bubbleIncrement) * 17);}
+.seventyFive{ left: calc(var(--bubbleIncrement) * 18);}
+.seventySix{ left: calc(var(--bubbleIncrement) * 19);}
+.seventySeven{ left: calc(var(--bubbleIncrement) * 20);}
+.seventyEight{ left: calc(var(--bubbleIncrement) * 21);}
+.seventyNine{ left: calc(var(--bubbleIncrement) * 22);}
+.eighty{ left: calc(var(--bubbleIncrement) * 23);}
+.eightyOne{ left: calc(var(--bubbleIncrement) * 24);}
+.eightyTwo{ left: calc(var(--bubbleIncrement) * 25);}
+.eightyThree{ left: calc(var(--bubbleIncrement) * 26);}
+.eightyFour{ left: calc(var(--bubbleIncrement) * 27);}
+.eightyFive{ left: calc(var(--bubbleIncrement) * 28);}
+.eightySix{ left: calc(var(--bubbleIncrement) * 29);}
+.eightySeven{ left: calc(var(--bubbleIncrement) * 30);}
+.eightyEight{ left: calc(var(--bubbleIncrement) * 31);}
+.eightyNine{ left: calc(var(--bubbleIncrement) * 32);}
+.ninety{ left: calc(var(--bubbleIncrement) * 33);}
+.ninetyOne{ left: calc(var(--bubbleIncrement) * 34);}
+.ninetyTwo{ left: calc(var(--bubbleIncrement) * 35);}
+.ninetyThree{ left: calc(var(--bubbleIncrement) * 36);}
+.ninetyFour{ left: calc(var(--bubbleIncrement) * 37);}
+.ninetyFive{ left: calc(var(--bubbleIncrement) * 38);}
+.ninetySix{ left: calc(var(--bubbleIncrement) * 39);}
+.ninetySeven{ left: calc(var(--bubbleIncrement) * 40);}
+.ninetyEight{ left: calc(var(--bubbleIncrement) * 41);}
+.ninetyNine{ left: calc(var(--bubbleIncrement) * 42);}
+.thousand{ left: calc(var(--bubbleIncrement) * 43);}
+/*42 bubbles in total, 1958 to 2000*/
+
+/*future and past arrows*/
+.past{ position: var(--positionStatus); left: 0px; top: var(--middleDistance);}
+.future{ position: var(--positionStatus); left: 8800px; top: var(--middleDistance);}
+/*future and past arrows*/
+
+/*TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES --- TIMELINE AND BUBBLES*/
+
+/*INFORMATION FOR EACH BUBBLE --- INFORMATION FOR EACH BUBBLE --- INFORMATION FOR EACH BUBBLE --- INFORMATION FOR EACH BUBBLE --- INFORMATION FOR EACH BUBBLE --- INFORMATION FOR EACH BUBBLE*/
+.firstTopLayer{
+    position: absolute; top: calc(50% - var(--firstLayerCompensate)); left: 50px;
+}
+/*INFORMATION FOR EACH BUBBLE --- INFORMATION FOR EACH BUBBLE --- INFORMATION FOR EACH BUBBLE --- INFORMATION FOR EACH BUBBLE --- INFORMATION FOR EACH BUBBLE --- INFORMATION FOR EACH BUBBLE*/
+
+
+
+/*FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE*/
+.funnel{ /*The class that bubble has second, that helps define the basic bubble architecture, to later let me change things for the individual*/
+    position: var(--positionStatus); width: var(--funnelWidth); height: var(--funnelHeight);
+}
+
+.top{
+    content: var(--topFunnelImageURL); top: calc(var(--middleDistance) - 50px);
+}
+.bottom{
+    content: var(--bottomFunnelImageURL); top: calc(var(--middleDistance) + 25px);
+}
+
+.fiftyEightFunnel{ left: calc(var(--bubbleIncrement) * 1 - var(--topFunnelAdjust));} /*for all of the bubbles individually*/
+.fiftyNineFunnel{ left: calc(var(--bubbleIncrement) * 2 - var(--bottomFunnelAdjust));}
+.sixtyFunnel{ left: calc(var(--bubbleIncrement) * 3 - var(--topFunnelAdjust));}
+.sixtyOneFunnel{ left: calc(var(--bubbleIncrement) * 4 - var(--bottomFunnelAdjust));}
+.sixtyTwoFunnel{ left: calc(var(--bubbleIncrement) * 5 - var(--topFunnelAdjust));}
+.sixtyThreeFunnel{ left: calc(var(--bubbleIncrement) * 6 - var(--bottomFunnelAdjust));}
+.sixtyFourFunnel{ left: calc(var(--bubbleIncrement) * 7 - var(--topFunnelAdjust));}
+.sixtyFiveFunnel{ left: calc(var(--bubbleIncrement) * 8 - var(--bottomFunnelAdjust));}
+.sixtySixFunnel{ left: calc(var(--bubbleIncrement) * 9 - var(--topFunnelAdjust));}
+.sixtySevenFunnel{ left: calc(var(--bubbleIncrement) * 10 - var(--bottomFunnelAdjust));}
+.sixtyEightFunnel{ left: calc(var(--bubbleIncrement) * 11 - var(--topFunnelAdjust));}
+.sixtyNineFunnel{ left: calc(var(--bubbleIncrement) * 12 - var(--bottomFunnelAdjust));}
+.seventyFunnel{ left: calc(var(--bubbleIncrement) * 13 - var(--topFunnelAdjust));}
+.seventyOneFunnel{ left: calc(var(--bubbleIncrement) * 14 - var(--bottomFunnelAdjust));}
+.seventyTwoFunnel{ left: calc(var(--bubbleIncrement) * 15 - var(--topFunnelAdjust));}
+.seventyThreeFunnel{ left: calc(var(--bubbleIncrement) * 16 - var(--bottomFunnelAdjust));}
+.seventyFourFunnel{ left: calc(var(--bubbleIncrement) * 17 - var(--topFunnelAdjust));}
+.seventyFiveFunnel{ left: calc(var(--bubbleIncrement) * 18 - var(--bottomFunnelAdjust));}
+.seventySixFunnel{ left: calc(var(--bubbleIncrement) * 19 - var(--topFunnelAdjust));}
+.seventySevenFunnel{ left: calc(var(--bubbleIncrement) * 20 - var(--bottomFunnelAdjust));}
+.seventyEightFunnel{ left: calc(var(--bubbleIncrement) * 21 - var(--topFunnelAdjust));}
+.seventyNineFunnel{ left: calc(var(--bubbleIncrement) * 22 - var(--bottomFunnelAdjust));}
+.eightyFunnel{ left: calc(var(--bubbleIncrement) * 23 - var(--topFunnelAdjust));}
+.eightyOneFunnel{ left: calc(var(--bubbleIncrement) * 24 - var(--bottomFunnelAdjust));}
+.eightyTwoFunnel{ left: calc(var(--bubbleIncrement) * 25 - var(--topFunnelAdjust));}
+.eightyThreeFunnel{ left: calc(var(--bubbleIncrement) * 26 - var(--bottomFunnelAdjust));}
+.eightyFourFunnel{ left: calc(var(--bubbleIncrement) * 27 - var(--topFunnelAdjust));}
+.eightyFiveFunnel{ left: calc(var(--bubbleIncrement) * 28 - var(--bottomFunnelAdjust));}
+.eightySixFunnel{ left: calc(var(--bubbleIncrement) * 29 - var(--topFunnelAdjust));}
+.eightySevenFunnel{ left: calc(var(--bubbleIncrement) * 30 - var(--bottomFunnelAdjust));}
+.eightyEightFunnel{ left: calc(var(--bubbleIncrement) * 31 - var(--topFunnelAdjust));}
+.eightyNineFunnel{ left: calc(var(--bubbleIncrement) * 32 - var(--bottomFunnelAdjust));}
+.ninetyFunnel{ left: calc(var(--bubbleIncrement) * 33 - var(--topFunnelAdjust));}
+.ninetyOneFunnel{ left: calc(var(--bubbleIncrement) * 34 - var(--bottomFunnelAdjust));}
+.ninetyTwoFunnel{ left: calc(var(--bubbleIncrement) * 35 - var(--topFunnelAdjust));}
+.ninetyThreeFunnel{ left: calc(var(--bubbleIncrement) * 36 - var(--bottomFunnelAdjust));}
+.ninetyFourFunnel{ left: calc(var(--bubbleIncrement) * 37 - var(--topFunnelAdjust));}
+.ninetyFiveFunnel{ left: calc(var(--bubbleIncrement) * 38 - var(--bottomFunnelAdjust));}
+.ninetySixFunnel{ left: calc(var(--bubbleIncrement) * 39 - var(--topFunnelAdjust));}
+.ninetySevenFunnel{ left: calc(var(--bubbleIncrement) * 40 - var(--bottomFunnelAdjust));}
+.ninetyEightFunnel{ left: calc(var(--bubbleIncrement) * 41 - var(--topFunnelAdjust));}
+.ninetyNineFunnel{ left: calc(var(--bubbleIncrement) * 42 - var(--bottomFunnelAdjust));}
+.thousandFunnel{ left: calc(var(--bubbleIncrement) * 43 - var(--topFunnelAdjust));}
+/*FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE --- FUNNEL FOR EACH BUBBLE*/
+
+
+.info{
+    position: var(--positionStatus); width: 300px;
+}
+
+.topInfo{
+    bottom: calc(var(--middleDistance) + 50px);
+}
+.bottomInfo{
+    top: calc(var(--middleDistance) + 50px);
+}
+
+.fiftyEightFunnelInfo{ left: calc(var(--bubbleIncrement) * 1 - var(--infoTopAdjust));} /*for all of the bubbles individually*/
+.fiftyNineFunnelInfo{ left: calc(var(--bubbleIncrement) * 2 - var(--infoBottomAdjust));}
+.sixtyFunnelInfo{ left: calc(var(--bubbleIncrement) * 3 - var(--infoTopAdjust));}
+.sixtyOneFunnelInfo{ left: calc(var(--bubbleIncrement) * 4 - var(--infoBottomAdjust));}
+.sixtyTwoFunnelInfo{ left: calc(var(--bubbleIncrement) * 5 - var(--infoTopAdjust));}
+.sixtyThreeFunnelInfo{ left: calc(var(--bubbleIncrement) * 6 - var(--infoBottomAdjust));}
+.sixtyFourFunnelInfo{ left: calc(var(--bubbleIncrement) * 7 - var(--infoTopAdjust));}
+.sixtyFiveFunnelInfo{ left: calc(var(--bubbleIncrement) * 8 - var(--infoBottomAdjust));}
+.sixtySixFunnelInfo{ left: calc(var(--bubbleIncrement) * 9 - var(--infoTopAdjust));}
+.sixtySevenFunnelInfo{ left: calc(var(--bubbleIncrement) * 10 - var(--infoBottomAdjust));}
+.sixtyEightFunnelInfo{ left: calc(var(--bubbleIncrement) * 11 - var(--infoTopAdjust));}
+.sixtyNineFunnelInfo{ left: calc(var(--bubbleIncrement) * 12 - var(--infoBottomAdjust));}
+.seventyFunnelInfo{ left: calc(var(--bubbleIncrement) * 13 - var(--infoTopAdjust));}
+.seventyOneFunnelInfo{ left: calc(var(--bubbleIncrement) * 14 - var(--infoBottomAdjust));}
+.seventyTwoFunnelInfo{ left: calc(var(--bubbleIncrement) * 15 - var(--infoTopAdjust));}
+.seventyThreeFunnelInfo{ left: calc(var(--bubbleIncrement) * 16 - var(--infoBottomAdjust));}
+.seventyFourFunnelInfo{ left: calc(var(--bubbleIncrement) * 17 - var(--infoTopAdjust));}
+.seventyFiveFunnelInfo{ left: calc(var(--bubbleIncrement) * 18 - var(--infoBottomAdjust));}
+.seventySixFunnelInfo{ left: calc(var(--bubbleIncrement) * 19 - var(--infoTopAdjust));}
+.seventySevenFunnelInfo{ left: calc(var(--bubbleIncrement) * 20 - var(--infoBottomAdjust));}
+.seventyEightFunnelInfo{ left: calc(var(--bubbleIncrement) * 21 - var(--infoTopAdjust));}
+.seventyNineFunnelInfo{ left: calc(var(--bubbleIncrement) * 22 - var(--infoBottomAdjust));}
+.eightyFunnelInfo{ left: calc(var(--bubbleIncrement) * 23 - var(--infoTopAdjust));}
+.eightyOneFunnelInfo{ left: calc(var(--bubbleIncrement) * 24 - var(--infoBottomAdjust));}
+.eightyTwoFunnelInfo{ left: calc(var(--bubbleIncrement) * 25 - var(--infoTopAdjust));}
+.eightyThreeFunnelInfo{ left: calc(var(--bubbleIncrement) * 26 - var(--infoBottomAdjust));}
+.eightyFourFunnelInfo{ left: calc(var(--bubbleIncrement) * 27 - var(--infoTopAdjust));}
+.eightyFiveFunnelInfo{ left: calc(var(--bubbleIncrement) * 28 - var(--infoBottomAdjust));}
+.eightySixFunnelInfo{ left: calc(var(--bubbleIncrement) * 29 - var(--infoTopAdjust));}
+.eightySevenFunnelInfo{ left: calc(var(--bubbleIncrement) * 30 - var(--infoBottomAdjust));}
+.eightyEightFunnelInfo{ left: calc(var(--bubbleIncrement) * 31 - var(--infoTopAdjust));}
+.eightyNineFunnelInfo{ left: calc(var(--bubbleIncrement) * 32 - var(--infoBottomAdjust));}
+.ninetyFunnelInfo{ left: calc(var(--bubbleIncrement) * 33 - var(--infoTopAdjust));}
+.ninetyOneFunnelInfo{ left: calc(var(--bubbleIncrement) * 34 - var(--infoBottomAdjust));}
+.ninetyTwoFunnelInfo{ left: calc(var(--bubbleIncrement) * 35 - var(--infoTopAdjust));}
+.ninetyThreeFunnelInfo{ left: calc(var(--bubbleIncrement) * 36 - var(--infoBottomAdjust));}
+.ninetyFourFunnelInfo{ left: calc(var(--bubbleIncrement) * 37 - var(--infoTopAdjust));}
+.ninetyFiveFunnelInfo{ left: calc(var(--bubbleIncrement) * 38 - var(--infoBottomAdjust));}
+.ninetySixFunnelInfo{ left: calc(var(--bubbleIncrement) * 39 - var(--infoTopAdjust));}
+.ninetySevenFunnelInfo{ left: calc(var(--bubbleIncrement) * 40 - var(--infoBottomAdjust));}
+.ninetyEightFunnelInfo{ left: calc(var(--bubbleIncrement) * 41 - var(--infoTopAdjust));}
+.ninetyNineFunnelInfo{ left: calc(var(--bubbleIncrement) * 42 - var(--infoBottomAdjust));}
+.thousandFunnelInfo{ left: calc(var(--bubbleIncrement) * 43 - var(--infoTopAdjust));}
