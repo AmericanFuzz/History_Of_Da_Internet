@@ -1,0 +1,77 @@
+import cv2
+import numpy as np
+import RPi.GPIO as GPIO
+import time
+
+# Set up GPIO for servo control
+servo_pin = 2
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(servo_pin, GPIO.OUT)
+servo = GPIO.PWM(servo_pin, 50)  # 50 Hz PWM
+
+# Initialize the servo at its mid position
+servo.start(7.5)  # Duty cycle for mid position
+
+# Set up camera
+cap = cv2.VideoCapture(0)
+cap.set(3, 320)  # Width
+cap.set(4, 240)  # Height
+
+# Define lower and upper bounds for red color in HSV
+lower_red = np.array([0, 100, 100])
+upper_red = np.array([10, 255, 255])
+
+# Define function to move servo based on position of red ball
+def move_servo(x, center_threshold=20):
+    mid_x = cap.get(3) / 2
+    if x < mid_x - center_threshold:
+        # Move servo to the left
+        servo.ChangeDutyCycle(10)  # Adjust duty cycle for desired left position
+    elif x > mid_x + center_threshold:
+        # Move servo to the right
+        servo.ChangeDutyCycle(5)  # Adjust duty cycle for desired right position
+    else:
+        # Ball is in the center, stop servo
+        servo.ChangeDutyCycle(7.5)  # Adjust duty cycle for mid position
+
+try:
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+
+        # Convert frame to HSV
+        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+        # Threshold the HSV image to get only red colors
+        mask = cv2.inRange(hsv, lower_red, upper_red)
+
+        # Find contours in the mask
+        contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+        # If contours are found, get the centroid of the largest contour
+        if contours:
+            max_contour = max(contours, key=cv2.contourArea)
+            M = cv2.moments(max_contour)
+            if M["m00"] != 0:
+                cX = int(M["m10"] / M["m00"])
+                cY = int(M["m01"] / M["m00"])
+
+                # Draw the center of the contour on the frame
+                cv2.circle(frame, (cX, cY), 7, (255, 255, 255), -1)
+
+                # Move servo based on the position of the red ball
+                move_servo(cX)
+
+        cv2.imshow("Frame", frame)
+
+        key = cv2.waitKey(1) & 0xFF
+        if key == ord("q"):
+            break
+
+finally:
+    # Clean up
+    servo.stop()
+    GPIO.cleanup()
+    cap.release()
+    cv2.destroyAllWindows()
