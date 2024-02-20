@@ -141,6 +141,18 @@ are called: "rulesets".
     font-size: 8px;
 }
 
+
+/*Dates*/
+.TopDate{ /*colective dates*/
+    position: absolute;
+    top: calc(50% + var(--dateTopDelta));
+}
+
+.BottomDate{ /*colective dates*/
+    position: absolute;
+    top: calc(50% + var(--dateBottomDelta));
+}
+
 .fiftyEightYear{ left: calc((var(--bubbleIncrement) * 1) - var(--dateAdjust));} /*for all of the dates individually*/
 .fiftyNineYear{ left: calc((var(--bubbleIncrement) * 2) - var(--dateAdjust));}
 .sixtyYear{ left: calc((var(--bubbleIncrement) * 3) - var(--dateAdjust));}
