@@ -1,0 +1,318 @@
+<!DOCTYPE html> <!--set the library of html to the document to be able to do anything in the first place-->
+
+<!--This is how you comment to remember things(you cannot put a comment in a comment):-->
+<!---->
+
+<!--Comments also can go across several lines, like this:
+        And this:
+    
+                        Pretty cool.-->
+
+<!--"Tags" are the things that go: <></>, while "Attributes" are one - liners like: img<> -->
+<!--Tags and Attributes can be put in each other, as long as they close in order of getting opened.-->
+
+<!--The basic setup like void loop() and void setup() in c++ are in HTML with the pattern:
+
+<html>                                              (set up the website to exist) 
+    <head>                                          
+                                                    (name the "tab" in the browser of your website)
+    </head>
+
+    <body>
+                                                    (actual website contents)
+    </body>
+</html>                                             (close website file to be presented)
+
+That's pretty much it I think.-->
+
+<!--The little icon on the tab is called a favicon, and has to be a 16*16 or 32*32 square .ico or .gif or .png-->
+<!--I got my favion(s) by designing and downloading them on the website: "favicon.cc"-->
+
+<!--SAVE EVERYTHING BEFORE OPENING IN BROWSER, OR THERE WILL BE NO NEW RESULTS!!!
+
+*** INCLUDING JAVASCRIPT AND CSS FILES!!!-->
+
+<!--You don't actually need tags to write text, just type anything anyhow, and you will see text(it will be default crappy text though with no control)-->
+
+
+<!--"class" sets the categories of tags that can be modified from css, AND EVERYTHING IN THEM!
+
+example: 
+
+HTML
+<div class = "redText">
+    <h1>Hello</h1>
+    <h1>Goodbye</h1>
+</div>
+
+CSS
+.redText{
+    fontColor: .red;
+}
+
+This will make all of the text h1's and anything else red! BAD!
+
+do this:
+
+HTML
+<div>
+    <h1 class = "green">Hello</h1>
+    <h1 class = "red">Goodbye</h1>
+</div>
+
+CSS
+.green{
+    fontColor: .green;
+}
+.red{
+    fontColor: .red;
+}
+-->
+
+<!--<hr> is a simple spacer-->
+<!--<br> is a simple line breaker(new line in <p></p>)-->
+
+<!--� is a CRASH SYMBOL. CRASH MOST CODES WITH THIS THING. DON'T COME CRYING WHEN YOU FUZZ UP.-->
+
+<html lang="en"> <!--open up the website with the "html" -->
+
+    <head> <!--Tab bar stuff-->
+        <title>HistoryOfDaInternet</title> <!--name the tab-->
+        <link rel="icon" href="https://americanfuzz.github.io/History_Of_Da_Internet/faviconV3.ico"> <!--image the tab-->
+        <link rel = "stylesheet" href = V8_style.css>
+    </head>
+    
+    <body> <!--actual website contents-->
+        
+        <div class = "titleStuff">
+            <h1 class = "mainTitle"><u>History Of Da Internet</u></h1>
+            <a href="https://americanfuzz.github.io/History_Of_Da_Internet/HistoryOfDaInternetBibliography.pdf" class = "bibliography"><h3>Bibliography</h3></a>
+            <a href="https://americanfuzz.github.io/History_Of_Da_Internet/HistoryOfDaInternetRefrences.pdf" class = "refrences"><h3>Refrences</h3></a>
+
+            <img class = "titleBorder" src = "https://americanfuzz.github.io/History_Of_Da_Internet/lineV2.png" alt = "border" width = 1000 height = 6>
+            <img class = "creditBorder" src = "https://americanfuzz.github.io/History_Of_Da_Internet/lineV2.png" alt = "border" width = 3000 height = 6>
+            <h3 class = "myCredit">Programmer: Sebastian Kazakov(AmericanFuzz)</h3>
+            <h3 class = "traceCredit">Layout Designer: Shawn DeCourcey</h3>
+            <h3 class = "shawnCredit">Graphics Designer: Trace Flora</h3>
+            <h5 class = "familyCredit">People who always were there to support me coding late into night: Elena Mytarkina, Teymur Kazakov, Yaroslava Kazakova, Vasilisa Kazakova, Frederica Kazakova</h3>
+        </div>
+
+        <div class = "yearDates">
+            <p class = "fiftyEightYear BottomDate date">1958</p>
+            <p class = "fiftyNineYear TopDate date">1959</p>
+            <p class = "sixtyYear BottomDate date">1960</p>
+            <p class = "sixtyOneYear TopDate date">1961</p>
+            <p class = "sixtyTwoYear BottomDate date">1962</p>
+            <p class = "sixtyThreeYear TopDate date">1963</p>
+            <p class = "sixtyFourYear BottomDate date">1964</p>
+            <p class = "sixtyFiveYear TopDate date">1965</p>
+            <p class = "sixtySixYear BottomDate date">1966</p>
+            <p class = "sixtySevenYear TopDate date">1967</p>
+            <p class = "sixtyEightYear BottomDate date">1968</p>
+            <p class = "sixtyNineYear TopDate date">1969</p>
+            <p class = "seventyYear BottomDate date">1970</p>
+            <p class = "seventyOneYear TopDate date">1971</p>
+            <p class = "seventyTwoYear BottomDate date">1972</p>
+            <p class = "seventyThreeYear TopDate date">1973</p>
+            <p class = "seventyFourYear BottomDate date">1974</p>
+            <p class = "seventyFiveYear TopDate date">1975</p>
+            <p class = "seventySixYear BottomDate date">1976</p>
+            <p class = "seventySevenYear TopDate date">1977</p>
+            <p class = "seventyEightYear BottomDate date">1978</p>
+            <p class = "seventyNineYear TopDate date">1979</p>
+            <p class = "eightyYear BottomDate date">1980</p>
+            <p class = "eightyOneYear TopDate date">1981</p>
+            <p class = "eightyTwoYear BottomDate date">1982</p>
+            <p class = "eightyThreeYear TopDate date">1983</p>
+            <p class = "eightyFourYear BottomDate date">1984</p>
+            <p class = "eightyFiveYear TopDate date">1985</p>
+            <p class = "eightySixYear BottomDate date">1986</p>
+            <p class = "eightySevenYear TopDate date">1987</p>
+            <p class = "eightyEightYear BottomDate date">1988</p>
+            <p class = "eightyNineYear TopDate date">1989</p>
+            <p class = "ninetyYear BottomDate date">1990</p>
+            <p class = "ninetyOneYear TopDate date">1991</p>
+            <p class = "ninetyTwoYear BottomDate date">1992</p>
+            <p class = "ninetyThreeYear TopDate date">1993</p>
+            <p class = "ninetyFourYear BottomDate date">1994</p>
+            <p class = "ninetyFiveYear TopDate date">1995</p>
+            <p class = "ninetySixYear BottomDate date">1996</p>
+            <p class = "ninetySevenYear TopDate date">1997</p>
+            <p class = "ninetyEightYear BottomDate date">1998</p>
+            <p class = "ninetyNineYear TopDate date">1999</p>
+            <p class = "thousandYear BottomDate date">2000</p>
+        </div>
+
+        <!--HTML uses just numbers for sizes, CSS needs number and "px" after it. example:: HTML: 50 CSS: 50px-->
+        <img class = "timeLine" src = "https://americanfuzz.github.io/History_Of_Da_Internet/lineV2.png" alt = "timeLine" width = 8785 height = 18>
+
+        <!--A "div" here is not neccessary, but I want to be able to crunch the text down for easier reading-->
+        <div class = "bubbles"> <!--I am putting " bubble" after each image to give it a common class that can set up all of their similarities in one line, rather than 42. "alt" section is for their display name if the file is not found.(just in case.)-->
+            <img class = "fiftyEight bubble" alt = "bubble">
+            <img class = "fiftyNine bubble" alt = "bubble">
+            <img class = "sixty bubble" alt = "bubble">
+            <img class = "sixtyOne bubble" alt = "bubble">
+            <img class = "sixtyTwo bubble" alt = "bubble">
+            <img class = "sixtyThree bubble" alt = "bubble">
+            <img class = "sixtyFour bubble" alt = "bubble">                
+            <img class = "sixtyFive bubble" alt = "bubble">
+            <img class = "sixtySix bubble" alt = "bubble">
+            <img class = "sixtySeven bubble" alt = "bubble">
+            <img class = "sixtyEight bubble" alt = "bubble">
+            <img class = "sixtyNine bubble" alt = "bubble">
+            <img class = "seventy bubble" alt = "bubble">
+            <img class = "seventyOne bubble" alt = "bubble">
+            <img class = "seventyTwo bubble" alt = "bubble">
+            <img class = "seventyThree bubble" alt = "bubble">
+            <img class = "seventyFour bubble" alt = "bubble">
+            <img class = "seventyFive bubble" alt = "bubble">
+            <img class = "seventySix bubble" alt = "bubble">
+            <img class = "seventySeven bubble" alt = "bubble">
+            <img class = "seventyEight bubble" alt = "bubble">
+            <img class = "seventyNine bubble" alt = "bubble">
+            <img class = "eighty bubble" alt = "bubble">
+            <img class = "eightyOne bubble" alt = "bubble">
+            <img class = "eightyTwo bubble" alt = "bubble">
+            <img class = "eightyThree bubble" alt = "bubble">
+            <img class = "eightyFour bubble" alt = "bubble">
+            <img class = "eightyFive bubble" alt = "bubble">
+            <img class = "eightySix bubble" alt = "bubble">
+            <img class = "eightySeven bubble" alt = "bubble">
+            <img class = "eightyEight bubble" alt = "bubble">
+            <img class = "eightyNine bubble" alt = "bubble">
+            <img class = "ninety bubble" alt = "bubble">                
+            <img class = "ninetyOne bubble" alt = "bubble">
+            <img class = "ninetyTwo bubble" alt = "bubble">
+            <img class = "ninetyThree bubble" alt = "bubble">
+            <img class = "ninetyFour bubble" alt = "bubble">
+            <img class = "ninetyFive bubble" alt = "bubble">
+            <img class = "ninetySix bubble" alt = "bubble">
+            <img class = "ninetySeven bubble" alt = "bubble">
+            <img class = "ninetyEight bubble" alt = "bubble">
+            <img class = "ninetyNine bubble" alt = "bubble">
+            <img class = "thousand bubble" alt = "bubble">
+        </div>
+
+        <div class = "infoFunnels"> <!---->
+            <img class = "fiftyEightFunnel top funnel" alt = "funnel">
+            <img class = "fiftyNineFunnel bottom funnel" alt = "funnel">
+            <img class = "sixtyFunnel top funnel" alt = "funnel">
+            <img class = "sixtyOneFunnel bottom funnel" alt = "funnel">
+            <img class = "sixtyTwoFunnel top funnel" alt = "funnel">
+            <img class = "sixtyThreeFunnel bottom funnel" alt = "funnel">
+            <img class = "sixtyFourFunnel top funnel" alt = "funnel">                
+            <img class = "sixtyFiveFunnel bottom funnel" alt = "funnel">
+            <img class = "sixtySixFunnel top funnel" alt = "funnel">
+            <img class = "sixtySevenFunnel bottom funnel" alt = "funnel">
+            <img class = "sixtyEightFunnel top funnel" alt = "funnel">
+            <img class = "sixtyNineFunnel bottom funnel" alt = "funnel">
+            <img class = "seventyFunnel top funnel" alt = "funnel">
+            <img class = "seventyOneFunnel bottom funnel" alt = "funnel">
+            <img class = "seventyTwoFunnel top funnel" alt = "funnel">
+            <img class = "seventyThreeFunnel bottom funnel" alt = "funnel">
+            <img class = "seventyFourFunnel top funnel" alt = "funnel">
+            <img class = "seventyFiveFunnel bottom funnel" alt = "funnel">
+            <img class = "seventySixFunnel top funnel" alt = "funnel">
+            <img class = "seventySevenFunnel bottom funnel" alt = "funnel">
+            <img class = "seventyEightFunnel top funnel" alt = "funnel">
+            <img class = "seventyNineFunnel bottom funnel" alt = "funnel">
+            <img class = "eightyFunnel top funnel" alt = "funnel">
+            <img class = "eightyOneFunnel bottom funnel" alt = "funnel">
+            <img class = "eightyTwoFunnel top funnel" alt = "funnel">
+            <img class = "eightyThreeFunnel bottom funnel" alt = "funnel">
+            <img class = "eightyFourFunnel top funnel" alt = "funnel">
+            <img class = "eightyFiveFunnel bottom funnel" alt = "funnel">
+            <img class = "eightySixFunnel top funnel" alt = "funnel">
+            <img class = "eightySevenFunnel bottom funnel" alt = "funnel">
+            <img class = "eightyEightFunnel top funnel" alt = "funnel">
+            <img class = "eightyNineFunnel bottom funnel" alt = "funnel">
+            <img class = "ninetyFunnel top funnel" alt = "funnel">                
+            <img class = "ninetyOneFunnel bottom funnel" alt = "funnel">
+            <img class = "ninetyTwoFunnel top funnel" alt = "funnel">
+            <img class = "ninetyThreeFunnel bottom funnel" alt = "funnel">
+            <img class = "ninetyFourFunnel top funnel" alt = "funnel">
+            <img class = "ninetyFiveFunnel bottom funnel" alt = "funnel">
+            <img class = "ninetySixFunnel top funnel" alt = "funnel">
+            <img class = "ninetySevenFunnel bottom funnel" alt = "funnel">
+            <img class = "ninetyEightFunnel top funnel" alt = "funnel">
+            <img class = "ninetyNineFunnel bottom funnel" alt = "funnel">
+            <img class = "thousandFunnel top funnel" alt = "funnel">
+        </div>
+
+        <div class = "arrows">
+            <img class = "past" src = "https://americanfuzz.github.io/History_Of_Da_Internet/pastArrow.png" alt = "pastArrow" width = 25 height = 25>
+            <img class = "future" src = "https://americanfuzz.github.io/History_Of_Da_Internet/futureArrow.png" alt = "futureArrow" width = 25 height = 25>
+        </div>
+
+        <!--<br> to break lines-->
+        <div class = "information">
+            <p class = "fiftyEightFunnelInfo info topInfo">ARPA(Advanced Research Projects Agency) is made by Dwight D. Eisenhower because of the Soviet Sputik launch, and Jack Kilby makes the worlds first integrated circut.</p>
+            <p class = "fiftyNineFunnelInfo info bottomInfo">Mainframes were the old way of computer communication, where a main "parent computer controlled everything, and could easily be taken out to shut down the whole nation."</p>
+            <p class = "sixtyFunnelInfo info topInfo">Paul Baran makes a "hive mind" plan where computers rely on each other rather than on a single "parent" to promote reliability.</p>
+            <p class = "sixtyOneFunnelInfo info bottomInfo">Jack Ruina becomes head of ARPA, now called DARPA(D is for defense).</p>
+            <p class = "sixtyTwoFunnelInfo info topInfo">Joseph Licklider starts the path of AI, and has all credit stolen by people who worked less hard but wanted more credit.</p>
+            <p class = "sixtyThreeFunnelInfo info bottomInfo">Syncom 3 is the first satelite to be sent to space, and have it stay there until it's warranty death, not burning in the atmosphere.</p>
+            <p class = "sixtyFourFunnelInfo info topInfo">Joseph Licklider goes elsewhere to better opportunities, leaving Ivan Sutherland in charge.</p>
+            <p class = "sixtyFiveFunnelInfo info bottomInfo">Manfred Borner makes the world's first fiber - optic cable, that uses laser beams instead of electricity to transmit data.</p>
+            <p class = "sixtySixFunnelInfo info topInfo">Bob Taylor takes over DARPA.</p>
+            <p class = "sixtySevenFunnelInfo info bottomInfo">Eberhart Rechtin takes over DARPA.</p>
+            <p class = "sixtyEightFunnelInfo info topInfo">VCR's, Video Cassette Players, start becoming more mainstream, which are devices that use magnetic tape to store data in magnetic imprints on the "tape" or "film".</p>
+            <p class = "sixtyNineFunnelInfo info bottomInfo">Charley Kline sent the world's first message over the ARPANET, trying to do: L-O-G-I-N, but he only did L-O- before the system crashed.</p>
+            <p class = "seventyFunnelInfo info topInfo">John Draper is the world's first person to be known as a modern: "hacker", who tricked phones into getting free calls.</p>
+            <p class = "seventyOneFunnelInfo info bottomInfo">Alan Shugart creates the world's first floppy disk, and the ARPANET is complete.</p>
+            <p class = "seventyTwoFunnelInfo info topInfo">"Pong" becomes the world's first commercially successful game, but could only be played on a certain device, with the factory programming pre-installed.</p>
+            <p class = "seventyThreeFunnelInfo info bottomInfo">Bob Metcalfe makes the ethernet cable, a standardized organization of copper wires in a single cable, that is optimized for internet communication.</p>
+            <p class = "seventyFourFunnelInfo info topInfo">The world population reaches four billion, half of what it is today.</p>
+            <p class = "seventyFiveFunnelInfo info bottomInfo">Bill Gates makes microsoft for commercial technology sale, and the first interface message boards are made to send data from computer to computer(ancient wi-fi).</p>
+            <p class = "seventySixFunnelInfo info topInfo">Apple is founded by Steve Jobs to make a luxury device company in direct competition with Microsoft. VHS is also a new technology ripped off of VCS and VTR, but a lot more accessible and standardized for consumer use.</p>
+            <p class = "seventySevenFunnelInfo info bottomInfo">Star Wars becomes the first movie ever to use CGI(computer generated images), and Robert Fossum becomes the head of DARPA.</p>
+            <p class = "seventyEightFunnelInfo info topInfo">The IPSS(International Packet Switched Service) is made to communicate with other countries instantly, in advancement of the former telegraph communication.</p>
+            <p class = "seventyNineFunnelInfo info bottomInfo">CompuServe makes the world's first message system that really worked, the very first glimmer that e - mail might exist.</p>
+            <p class = "eightyFunnelInfo info topInfo">CB Simulator is made by Alexander Trevor(from CompuServe), where users can message each other in real - time, even faster than e-mail. This was the first online multiplayer "game" ever made.</p>
+            <p class = "eightyOneFunnelInfo info bottomInfo">Robert Cooper becomes the head of DARPA</p>
+            <p class = "eightyTwoFunnelInfo info topInfo">The CD(compact disk) is made as a competitor to the VHS, where a fine plastic uses laser ingraved notches as data to be read by a laser, saving several times more data per square millimeter than a VHS tape.</p>
+            <p class = "eightyThreeFunnelInfo info bottomInfo">Ethernet beats fiber - optic cables for the internet standard, favoring quantity over quality, and the ARPANET gets split between military and civiallian use, making TCP(Transfer Control Protocol) the standard data sharing procedure.</p>
+            <p class = "eightyFourFunnelInfo info topInfo">The Motorola DynaTAC 8000X is released, the world's first mobile phone, that weighed a brick, looked like a brick, and cost several thousand bricks</p>
+            <p class = "eightyFiveFunnelInfo info bottomInfo">NeXT is founded by Steve Jobs to get his job back after being fired, and he also makes Pixar, and several other monumental companies, and the Windows 1.0 operating system is released.</p>
+            <p class = "eightySixFunnelInfo info topInfo">There are now about 30,000 users of the internet, but it is very messy and disorganized, with no safety, no encription, and no standard transfer protocols.</p>
+            <p class = "eightySevenFunnelInfo info bottomInfo">The world population hits 5 billion, a 25% increase in 13 years.</p>
+            <p class = "eightyEightFunnelInfo info topInfo">The first fiber - optic cables are laid under the ocean for international communication at the speed of LIGHT, with no chance of external interference or hackers tapping in on signals. NeXT also makes: "the cube", a computer that Tim Berners-Lee would use to make the world wide web(the standard page - sharing system that uses the internet as a backbone)</p>
+            <p class = "eightyNineFunnelInfo info bottomInfo">The ARPANET is killed, replaced by better private companies, like the National Science Foundation Network.</p>
+            <p class = "ninetyFunnelInfo info topInfo">Alan Emtage makes Archie, the world's first search engine(like google) that gives users websites that match what they are looking for, instead of brute forcing through every website on the internet.</p>
+            <p class = "ninetyOneFunnelInfo info bottomInfo">People start getting a strong hype for the new advancments, and the .com bubble in the stock market starts to grow</p>
+            <p class = "ninetyTwoFunnelInfo info topInfo">Gary Denman becomes the head of DARPA</p>
+            <p class = "ninetyThreeFunnelInfo info bottomInfo">HTML is developed as the standard way to program a website into existance, and set up basic "elements".</p>
+            <p class = "ninetyFourFunnelInfo info topInfo">Jefferey Bezos establishes Amazon, a company that can manage and ship items that customers order online, forever changing how people buy goods, now from their home, to their home, in a single day.</p>
+            <p class = "ninetyFiveFunnelInfo info bottomInfo">Windows 95 is released, one of the most famous operating systems ever, Toy Story is released as the first fully - CGI movie by Pixar, and JavaScript is developed to control the different "elements" in a HTML document.</p>
+            <p class = "ninetySixFunnelInfo info topInfo">CSS is released to format the "elements" on an HTML page, to make JavaScript even easier. NeXT gets bought by Apple, and the DVD(Digital Video Disc) is developed as a competitor to the CD, getting 4 times more information per square millimeter than a CD.</p>
+            <p class = "ninetySevenFunnelInfo info bottomInfo">Vic Hayes makes Wi - Fi(Wireless Fidelity), which lets people use the internet without plugging in to an ethernet cable, by using radio waves to communicate with devices that can recieve radio waves, within 100 yards of the beacon.</p>
+            <p class = "ninetyEightFunnelInfo info topInfo">Robert Morris makes a computer worm(the world's first computer virus) to prove a point about internet safety, but goes to prison insead. Larry Page and Sergey Brin also make Google, the world's most advanced search engine today.</p>
+            <p class = "ninetyNineFunnelInfo info bottomInfo">The world population reached 6 billion, a 20% increase in 12 years.</p>
+            <p class = "thousandFunnelInfo info topInfo">The .com bubble bursts, and Steve Jobs makes the Mac OS X, the most advanced computer operating system yet.</p>
+        </div>
+
+        <div>
+            <img class = "darpa graphics" width = 100 height = 50 src = "https://americanfuzz.github.io/History_Of_Da_Internet/DARPA.png">
+            <img class = "mainframe graphics" width = 100 height = 100 src = "https://americanfuzz.github.io/History_Of_Da_Internet/mainframe.png">
+            <img class = "hivemind graphics" width = 100 height = 100 src = "https://americanfuzz.github.io/History_Of_Da_Internet/hiveMind.png">
+            <img class = "satelites graphics" width = 135 height = 135 src = "https://americanfuzz.github.io/History_Of_Da_Internet/spacelocked.jpeg">
+            <img class = "fiberoptics graphics" width = 135 height = 135 src = "https://americanfuzz.github.io/History_Of_Da_Internet/fiberoptics.jpeg">
+            <img class = "vcr graphics" width = 100 height = 100 src = "https://americanfuzz.github.io/History_Of_Da_Internet/vcr.png">
+            <img class = "whistle graphics" width = 100 height = 100 src = "https://americanfuzz.github.io/History_Of_Da_Internet/whistle.png">
+            <img class = "floppyDisk graphics" width = 200 height = 100 src = "https://americanfuzz.github.io/History_Of_Da_Internet/floppyDisk.png">
+            <img class = "ethernet graphics" width = 100 height = 100 src = "https://americanfuzz.github.io/History_Of_Da_Internet/ethernet.png">
+            <img class = "interfaceMessageBoard graphics" width = 100 height = 100 src = "https://americanfuzz.github.io/History_Of_Da_Internet/interface message board.png">
+            <img class = "vhs graphics" width = 100 height = 60 src = "https://americanfuzz.github.io/History_Of_Da_Internet/vhs.png">
+            <img class = "compuserve graphics" width = 140 height = 140 src = "https://americanfuzz.github.io/History_Of_Da_Internet/compuserve.jpeg">
+            <img class = "cd graphics" width = 50 height = 50 src = "https://americanfuzz.github.io/History_Of_Da_Internet/cd.png">
+            <img class = "motorolla graphics" width = 80 height = 80 src = "https://americanfuzz.github.io/History_Of_Da_Internet/motorolla.png">
+            <img class = "underwaterCables graphics" width = 300 height = 150 src = "https://americanfuzz.github.io/History_Of_Da_Internet/underwaterFiberOptics.png">
+            <img class = "archie graphics" width = 60 height = 60 src = "https://americanfuzz.github.io/History_Of_Da_Internet/archie.jpeg">
+            <img class = "html graphics" width = 200 height = 50 src = "https://americanfuzz.github.io/History_Of_Da_Internet/htmlLogo.png">
+            <img class = "java graphics" width = 200 height = 50 src = "https://americanfuzz.github.io/History_Of_Da_Internet/javaScriptLogo.png">
+            <img class = "css graphics" width = 200 height = 50 src = "https://americanfuzz.github.io/History_Of_Da_Internet/cssLogo.png">
+            <img class = "wifi graphics" width = 150 height = 125 src = "https://americanfuzz.github.io/History_Of_Da_Internet/wif.jpeg">
+        </div>
+
+    </body>  
+</html>
