@@ -1,0 +1,26 @@
+import os
+import subprocess
+
+def detect_objects(image_path):
+    # Run darknet command to detect objects
+    command = ['./darknet', 'detect', 'cfg/yolov3.cfg', 'yolov3.weights', image_path]
+    result = subprocess.run(command, stdout=subprocess.PIPE)
+    
+    # Parse output
+    output = result.stdout.decode('utf-8')
+    lines = output.split('\n')
+    objects = []
+    for line in lines:
+        if '%' in line:
+            object_info = line.split(': ')
+            object_name = object_info[0]
+            confidence = float(object_info[1].split('%')[0]) / 100.0
+            objects.append((object_name, confidence))
+    
+    return objects
+
+# Example usage
+image_path = 'example.jpg'
+objects = detect_objects(image_path)
+for obj in objects:
+    print(f'Object: {obj[0]}, Confidence: {obj[1]}')
