@@ -1,0 +1,54 @@
+from picamera import PiCamera
+from picamera.array import PiRGBArray
+import numpy as np
+import subprocess
+import io
+import time
+
+def detect_faces(image_data):
+    # Run darknet command to detect objects
+    command = ['./darknet', 'detect', 'cfg/yolov3.cfg', 'yolov3.weights']
+    result = subprocess.run(command, input=image_data, stdout=subprocess.PIPE)
+    
+    # Parse output
+    output = result.stdout.decode('utf-8')
+    lines = output.split('\n')
+    faces = []
+    for line in lines:
+        if 'person' in line:  # Assuming 'person' class is used to represent faces
+            face_info = line.split(': ')
+            face_coordinates = face_info[1].split(', ')
+            x, y, w, h = map(int, face_coordinates)
+            faces.append((x, y, w, h))
+    
+    return faces
+
+# Initialize PiCamera
+camera = PiCamera()
+camera.resolution = (640, 480)
+camera.framerate = 30
+raw_capture = PiRGBArray(camera, size=(640, 480))
+
+# Warm up the camera
+time.sleep(0.1)
+
+for frame in camera.capture_continuous(raw_capture, format="bgr", use_video_port=True):
+    # Capture image as numpy array
+    image = frame.array
+    
+    # Convert image to bytes
+    image_stream = io.BytesIO()
+    np.save(image_stream, image)
+    image_stream.seek(0)
+    image_data = image_stream.read()
+    
+    # Detect faces
+    faces = detect_faces(image_data)
+    print("Detected faces:", faces)
+    
+    # Clear the stream in preparation for the next frame
+    raw_capture.truncate(0)
+    
+    # Break the loop if 'q' is pressed
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
